@@ -1,4 +1,5 @@
 import csv
+import codecs
 
 # Cargar diccionario de Tipo Paciente
 with open('dictOrigen.csv', mode='r') as origenCsv:
@@ -62,8 +63,10 @@ def paisOrigen(key):
   else:
     return "NO APLICA"
 
-with open('datosPrueba.csv', mode='r') as csvFile:
+#with open('datosPrueba.csv', mode='r', encoding='utf-8') as csvFile:
+with open('201102COVID19MEXICO.csv', mode='r', encoding='utf-8-sig') as csvFile:
   csvReader = csv.DictReader(csvFile)
+  print(csvReader.fieldnames)
   with open('datosCovid.csv', mode='w') as csvOutFile:
     csvWriter = csv.DictWriter(csvOutFile, fieldnames=csvReader.fieldnames)
     csvWriter.writeheader()
