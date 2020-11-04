@@ -50,8 +50,23 @@ with open('dictMunicipios.csv', mode='r') as municipiosCsv:
   reader = csv.reader(municipiosCsv)
   dictMunicipios = {rows[0]:rows[1] for rows in reader}
 
+def paisNacionalidad(key):
+  if (key != "99"):
+    return key
+  else:
+    return "SE IGNORA"
+
+def paisOrigen(key):
+  if (key != "97"):
+    return key
+  else:
+    return "NO APLICA"
 
 with open('datosPrueba.csv', mode='r') as csvFile:
   csvReader = csv.DictReader(csvFile)
-  for row in csvReader:
-    print(row["FECHA_ACTUALIZACION"] + " " + dictOrigen(row["ORIGEN"]))
+  with open('datosCovid.csv', mode='w') as csvOutFile:
+    csvWriter = csv.DictWriter(csvOutFile, fieldnames=csvReader.fieldnames)
+    csvWriter.writeheader()
+    for row in csvReader:
+      csvWriter.writerow({})
+     # print(f'{row["FECHA_ACTUALIZACION"]},{row["ID_REGISTRO"]},{dictOrigen[row["ORIGEN"]]},{dictSector[row["SECTOR"]]},{dictEntidades[row["ENTIDAD_UM"]]},{dictSexo[row["SEXO"]]},{dictEntidades[row["ENTIDAD_NAC"]]},{dictEntidades[row["ENTIDAD_RES"]]},{dictMunicipios[row["MUNICIPIO_RES"]]},{dictTipoPaciente[row["TIPO_PACIENTE"]]},{row["FECHA_INGRESO"]},{row["FECHA_SINTOMAS"]},{row["FECHA_DEF"]},{dictSiNo[row["INTUBADO"]]},{dictSiNo[row["NEUMONIA"]]},{row["EDAD"]},{dictNacionalidad[row["NACIONALIDAD"]]},{dictSiNo[row["EMBARAZO"]]},{dictSiNo[row["HABLA_LENGUA_INDIG"]]},{dictSiNo[row["INDIGENA"]]},{dictSiNo[row["DIABETES"]]},{dictSiNo[row["EPOC"]]},{dictSiNo[row["ASMA"]]},{dictSiNo[row["INMUSUPR"]]},{dictSiNo[row["HIPERTENSION"]]},{dictSiNo[row["OTRA_COM"]]},{dictSiNo[row["CARDIOVASCULAR"]]},{dictSiNo[row["OBESIDAD"]]},{dictSiNo[row["RENAL_CRONICA"]]},{dictSiNo[row["TABAQUISMO"]]},{dictSiNo[row["OTRO_CASO"]]},{dictSiNo[row["TOMA_MUESTRA"]]},{dictResultadoLab[row["RESULTADO_LAB"]]},{dictClasificacionFinal[row["CLASIFICACION_FINAL"]]},{dictSiNo[row["MIGRANTE"]]},{paisNacionalidad(row["PAIS_NACIONALIDAD"])},{paisOrigen(row["PAIS_ORIGEN"])},{dictSiNo[row["UCI"]]}')
