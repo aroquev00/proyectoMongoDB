@@ -1,0 +1,163 @@
+schema:
+- db: covid
+  tables:
+  - table: covidMexico
+    collection: covidMexico
+    pipeline: []
+    columns:
+    - Name: _id
+      MongoType: bson.ObjectId
+      SqlName: _id
+      SqlType: objectid
+    - Name: ASMA
+      MongoType: string
+      SqlName: ASMA
+      SqlType: varchar
+    - Name: CARDIOVASCULAR
+      MongoType: string
+      SqlName: CARDIOVASCULAR
+      SqlType: varchar
+    - Name: CLASIFICACION_FINAL
+      MongoType: string
+      SqlName: CLASIFICACION_FINAL
+      SqlType: varchar
+    - Name: DIABETES
+      MongoType: string
+      SqlName: DIABETES
+      SqlType: varchar
+    - Name: EDAD
+      MongoType: int
+      SqlName: EDAD
+      SqlType: int
+    - Name: EMBARAZO
+      MongoType: string
+      SqlName: EMBARAZO
+      SqlType: varchar
+    - Name: ENTIDAD_NAC
+      MongoType: string
+      SqlName: ENTIDAD_NAC
+      SqlType: varchar
+    - Name: ENTIDAD_RES
+      MongoType: string
+      SqlName: ENTIDAD_RES
+      SqlType: varchar
+    - Name: ENTIDAD_UM
+      MongoType: string
+      SqlName: ENTIDAD_UM
+      SqlType: varchar
+    - Name: EPOC
+      MongoType: string
+      SqlName: EPOC
+      SqlType: varchar
+    - Name: FECHA_ACTUALIZACION
+      MongoType: date
+      SqlName: FECHA_ACTUALIZACION
+      SqlType: timestamp
+    - Name: FECHA_DEF
+      MongoType: date
+      SqlName: FECHA_DEF
+      SqlType: timestamp
+    - Name: FECHA_INGRESO
+      MongoType: date
+      SqlName: FECHA_INGRESO
+      SqlType: timestamp
+    - Name: FECHA_SINTOMAS
+      MongoType: date
+      SqlName: FECHA_SINTOMAS
+      SqlType: timestamp
+    - Name: HABLA_LENGUA_INDIG
+      MongoType: string
+      SqlName: HABLA_LENGUA_INDIG
+      SqlType: varchar
+    - Name: HIPERTENSION
+      MongoType: string
+      SqlName: HIPERTENSION
+      SqlType: varchar
+    - Name: ID_REGISTRO
+      MongoType: bson.UUID
+      SqlName: ID_REGISTRO
+      SqlType: varchar
+    - Name: INDIGENA
+      MongoType: string
+      SqlName: INDIGENA
+      SqlType: varchar
+    - Name: INMUSUPR
+      MongoType: string
+      SqlName: INMUSUPR
+      SqlType: varchar
+    - Name: INTUBADO
+      MongoType: string
+      SqlName: INTUBADO
+      SqlType: varchar
+    - Name: MIGRANTE
+      MongoType: string
+      SqlName: MIGRANTE
+      SqlType: varchar
+    - Name: MUNICIPIO_RES
+      MongoType: string
+      SqlName: MUNICIPIO_RES
+      SqlType: varchar
+    - Name: NACIONALIDAD
+      MongoType: string
+      SqlName: NACIONALIDAD
+      SqlType: varchar
+    - Name: NEUMONIA
+      MongoType: string
+      SqlName: NEUMONIA
+      SqlType: varchar
+    - Name: OBESIDAD
+      MongoType: string
+      SqlName: OBESIDAD
+      SqlType: varchar
+    - Name: ORIGEN
+      MongoType: string
+      SqlName: ORIGEN
+      SqlType: varchar
+    - Name: OTRA_COM
+      MongoType: string
+      SqlName: OTRA_COM
+      SqlType: varchar
+    - Name: OTRO_CASO
+      MongoType: string
+      SqlName: OTRO_CASO
+      SqlType: varchar
+    - Name: PAIS_NACIONALIDAD
+      MongoType: string
+      SqlName: PAIS_NACIONALIDAD
+      SqlType: varchar
+    - Name: PAIS_ORIGEN
+      MongoType: string
+      SqlName: PAIS_ORIGEN
+      SqlType: varchar
+    - Name: RENAL_CRONICA
+      MongoType: string
+      SqlName: RENAL_CRONICA
+      SqlType: varchar
+    - Name: RESULTADO_LAB
+      MongoType: string
+      SqlName: RESULTADO_LAB
+      SqlType: varchar
+    - Name: SECTOR
+      MongoType: string
+      SqlName: SECTOR
+      SqlType: varchar
+    - Name: SEXO
+      MongoType: string
+      SqlName: SEXO
+      SqlType: varchar
+    - Name: TABAQUISMO
+      MongoType: string
+      SqlName: TABAQUISMO
+      SqlType: varchar
+    - Name: TIPO_PACIENTE
+      MongoType: string
+      SqlName: TIPO_PACIENTE
+      SqlType: varchar
+    - Name: TOMA_MUESTRA
+      MongoType: string
+      SqlName: TOMA_MUESTRA
+      SqlType: varchar
+    - Name: UCI
+      MongoType: string
+      SqlName: UCI
+      SqlType: varchar
